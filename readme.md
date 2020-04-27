@@ -34,6 +34,9 @@ pip install gunicorn dj-database-url whitenoise psycopg2
 
 pip freeze > requirements.txt
 
+python manage.py collectstatic
+python manage.py runserver
+
 ## Github 
 
 git add .
