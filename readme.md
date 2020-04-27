@@ -27,4 +27,8 @@ touch Procfile
     web: gunicorn djangoherokuapp.wsgi --log-file -
 
 touch runtime.txt
-    python-3.6.9
+    python-3.6.10
+
+pip install gunicorn dj-database-url whitenoise psycopg2
+
+pip freeze > requirements.txt
