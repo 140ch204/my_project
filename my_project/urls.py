@@ -22,7 +22,13 @@ from my_app import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    path('admin/', admin.site.urls),
+    path('overtherainbow/', admin.site.urls),
 ]
 
+#handler500 = 'my_app.views.my_custom_error_view'
 handler404 = 'my_app.views.page_not_found_view'
+#handler403 = 'my_app.views.my_custom_permission_denied_view'
+#handler400 = 'my_app.views.my_custom_bad_request_view'
+
+
+
