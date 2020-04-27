@@ -24,7 +24,7 @@ python manage.py migrate
 python manage.py runserver
 
 touch Procfile
-    web: gunicorn djangoherokuapp.wsgi --log-file -
+    web: gunicorn my_project.wsgi --log-file -
 
 touch runtime.txt
     python-3.6.10
@@ -32,3 +32,14 @@ touch runtime.txt
 pip install gunicorn dj-database-url whitenoise psycopg2
 
 pip freeze > requirements.txt
+
+heroku create herokudjangoapp
+
+git add .
+git commit -m "init"
+
+git push origin master
+git push heroku master
+
+heroku run python manage.py migrate
+heroku logs --tail
