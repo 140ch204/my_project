@@ -29,7 +29,11 @@ SECRET_KEY = os.getenv("ENV_SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUGMODE_ACTIVATED = os.getenv("DEBUGMODE_ACTIVATED")
+if DEBUGMODE_ACTIVATED == "1" : 
+    DEBUG = True
+else :
+    DEBUG = False
 
 ALLOWED_HOSTS = [
     'django-heroku-4.herokuapp.com',
