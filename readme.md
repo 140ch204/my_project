@@ -45,6 +45,6 @@ git push origin master
 git push heroku master
 
 heroku create herokudjangoapp
-heroku config:set DISABLE_COLLECTSTATIC=1  and restarting
+heroku config:set   DISABLE_COLLECTSTATIC=1 and restarting
 heroku run python manage.py migrate
 heroku logs --tail
