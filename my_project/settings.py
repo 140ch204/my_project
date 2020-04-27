@@ -44,6 +44,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'my_app',
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,12 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_app',
 ]
 
 MIDDLEWARE = [
 #    'SessionMiddleware',
-#    'AuthenticationMiddleware',  
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -155,4 +154,3 @@ DATABASES['default'].update(prod_db)
 
 
 
-#TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]

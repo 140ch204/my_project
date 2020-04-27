@@ -51,3 +51,20 @@ heroku create herokudjangoapp
 heroku config:set   DISABLE_COLLECTSTATIC=1 and restarting
 heroku run python manage.py migrate
 heroku logs --tail
+
+
+
+
+python manage.py shell
+
+from django.contrib.auth.models import User
+User.objects.all()
+
+super user local : 
+login: joe
+mdp: admin
+email: joe@example.com
+
+login: john
+email: lennon@thebeatles.com
+mdp: johnpassword
