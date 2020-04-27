@@ -11,14 +11,7 @@ def index(request):
 
     context = {'hello': 'Hello World'
     }
-    return render(request, 'my_app/index.html', context)
-
-def log_in(request):
-
-    context = {'hello': 'Hello World'
-    }
-    return render(request, 'registration/login.html', context)
-
+    return render(request, 'index.html', context)
 
 def my_custom_error_view(request):
      return render(request,'errors/500.html')

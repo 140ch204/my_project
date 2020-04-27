@@ -68,3 +68,8 @@ email: joe@example.com
 login: john
 email: lennon@thebeatles.com
 mdp: johnpassword
+
+
+
+import dj_database_url
+import dotenv
