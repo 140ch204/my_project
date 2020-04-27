@@ -2,6 +2,7 @@
 
 https://www.codementor.io/@jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
 
+## Django Initialization :
 
 mkdir projectfolder
 
@@ -33,13 +34,17 @@ pip install gunicorn dj-database-url whitenoise psycopg2
 
 pip freeze > requirements.txt
 
-heroku create herokudjangoapp
+## Github 
 
 git add .
 git commit -m "init"
-
 git push origin master
+
+## Heroku 
+
 git push heroku master
 
+heroku create herokudjangoapp
+heroku config:set DISABLE_COLLECTSTATIC=1  and restarting
 heroku run python manage.py migrate
 heroku logs --tail
