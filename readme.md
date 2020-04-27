@@ -52,7 +52,9 @@ heroku config:set   DISABLE_COLLECTSTATIC=1 and restarting
 heroku run python manage.py migrate
 heroku logs --tail
 
-
+heroku run bash
+    python manage.py migrate
+    python manage.py createsuperuser
 
 
 python manage.py shell
@@ -70,6 +72,3 @@ email: lennon@thebeatles.com
 mdp: johnpassword
 
 
-
-import dj_database_url
-import dotenv
