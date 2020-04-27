@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from django.conf.urls import include, url
-from herokuapp import views
+from my_app import views
 
 
 urlpatterns = [
