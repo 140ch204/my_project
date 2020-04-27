@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf.urls import include, url
+from herokuapp import views
+
+
 urlpatterns = [
+    url(r'^$', views.index),
     path('admin/', admin.site.urls),
 ]
