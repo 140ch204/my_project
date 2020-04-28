@@ -51,6 +51,9 @@ heroku create herokudjangoapp
 heroku config:set   DISABLE_COLLECTSTATIC=1 and restarting
 heroku run python manage.py migrate
 heroku logs --tail
+heroku config
+
+heroku run pyhton manage.py shell
 
 heroku run bash
     python manage.py migrate
