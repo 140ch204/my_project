@@ -92,20 +92,20 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 
 
 POSTGRE_ACTIVATED = os.getenv("POSTGRE_ACTIVATED")
-#if POSTGRE_ACTIVATED != "1" :
-#    DATABASES = {
-#        'default': {
-#            'ENGINE': 'django.db.backends.sqlite3',
-#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#        }
-#    }
-#    prod_db  =  dj_database_url.config(conn_max_age=500)
-#    DATABASES['default'].update(prod_db)
+if POSTGRE_ACTIVATED != "1" :
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+    prod_db  =  dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(prod_db)
 
-#if POSTGRE_ACTIVATED == "1" :
-DATABASE_URL = os.getenv("DATABASE_URL")
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+if POSTGRE_ACTIVATED == "1" :
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    DATABASES = {}
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
     
 
 
