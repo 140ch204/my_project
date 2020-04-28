@@ -2,6 +2,9 @@
 
 https://www.codementor.io/@jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
 
+https://learndjango.com/tutorials/django-login-and-logout-tutorial
+https://learndjango.com/tutorials/django-login-and-logout-tutorial
+
 ## Django Initialization :
 
 mkdir projectfolder
@@ -53,11 +56,19 @@ heroku run python manage.py migrate
 heroku logs --tail
 heroku config
 
-heroku run pyhton manage.py shell
+heroku run python manage.py shell
 
 heroku run bash
     python manage.py migrate
     python manage.py createsuperuser
+
+
+heroku pg:info
+heroku pg:psql
+    \l;
+    \dt;
+    SELECT * FROM auth_user;
+
 
 
 python manage.py shell
